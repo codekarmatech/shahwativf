@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="awardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="medalGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#awardGradient)"/>
+  
+  <!-- Award medal -->
+  <g transform="translate(200, 100)">
+    <!-- Medal circle -->
+    <circle cx="0" cy="0" r="50" fill="url(#medalGradient)" stroke="#92400e" stroke-width="3"/>
+    
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="35" fill="none" stroke="#92400e" stroke-width="2" opacity="0.7"/>
+    
+    <!-- Star in center -->
+    <polygon points="0,-20 6,-6 20,-6 10,2 16,16 0,8 -16,16 -10,2 -20,-6 -6,-6" fill="#92400e" opacity="0.8"/>
+    
+    <!-- Ribbon -->
+    <rect x="-8" y="45" width="16" height="40" fill="#dc2626" opacity="0.9"/>
+    <polygon points="-8,85 0,95 8,85" fill="#b91c1c"/>
+  </g>
+  
+  <!-- Excellence text -->
+  <text x="200" y="200" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold" opacity="0.9">EXCELLENCE AWARD</text>
+  <text x="200" y="220" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="12" opacity="0.8">Reproductive Medicine</text>
+  
+  <!-- Year -->
+  <text x="200" y="250" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="14" font-weight="bold" opacity="0.9">2024</text>
+</svg>

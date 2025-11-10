@@ -1,0 +1,337 @@
+# Shashwat IVF and Women's Hospital Website Design Specification
+
+This document outlines the design specifications for recreating the Shashwat IVF and Women's Hospital website (https://www.shashwativf.com/) with a modern, calming, and premium aesthetic suitable for a women's hospital and IVF center. The design incorporates a Bento Grid v2.0 layout, smooth animations for title texts, and a responsive navbar with dropdown menus for all services. The website will use React for the frontend and Django for the backend, with all content manageable through the Django admin panel.
+
+## 1. Design Goals
+The website aims to achieve the following:
+- **Calming Aesthetic**: Create a soothing experience with soft colors, rounded edges, and gentle animations to reflect the sensitive nature of fertility and women's health.
+- **Ultra-Modern Tech**: Incorporate cutting-edge design trends like Bento Grid v2.0, glassmorphism, and subtle gradients for a futuristic yet accessible look.
+- **Professional and Premium**: Deliver a polished, high-end feel with clean typography, consistent spacing, and premium UI elements.
+- **Easy to Understand**: Simplify navigation and content presentation for users of all technical levels, with clear calls-to-action (CTAs).
+- **Rich and Engaging**: Use animations, interactive elements, and a modular layout to make the website visually appealing and engaging.
+
+## 2. Theme and Color Palette
+The theme is designed to evoke trust, care, and femininity, aligning with the hospital's focus on women's health and fertility.
+
+### Color Palette
+| **Color**         | **Hex Code** | **Purpose**                              |
+|-------------------|--------------|------------------------------------------|
+| Primary (Soft Blue) | #4B9CD3      | Conveys trust and calmness, ideal for healthcare. |
+| Secondary (Warm Pink) | #F7C6C7      | Adds a nurturing, feminine touch, used subtly. |
+| Accent (Light Gold) | #E8D5A1      | Highlights CTAs and adds a premium feel.  |
+| Neutral (White)   | #FFFFFF      | Clean backgrounds for content.           |
+| Neutral (Light Gray) | #F5F5F5      | Subtle backgrounds for sections.         |
+| Neutral (Dark Gray) | #333333      | Text and contrast for readability.       |
+
+- **Gradient**: Linear gradient from Soft Blue to Warm Pink for hero sections, buttons, and select backgrounds to add a modern, dynamic touch.
+- **Usage**: Primary colors dominate headers and navigation, secondary colors accentuate service cards, and the accent color highlights CTAs like "Book Consultation."
+
+### Typography
+- **Primary Font**: Inter (sans-serif, clean, modern, highly legible).
+  - Weights: Regular (400), Medium (500), Bold (700).
+- **Secondary Font**: Lora (serif, warm, elegant for headings).
+  - Weights: Regular (400), Bold (700).
+- **Font Sizes**:
+  - Headings (h1): 48px (desktop), 36px (mobile).
+  - Subheadings (h2): 32px (desktop), 24px (mobile).
+  - Body Text: 16px (desktop), 14px (mobile).
+  - Captions: 12px (desktop), 10px (mobile).
+- **Line Height**: 1.5 for body text, 1.2 for headings.
+- **Letter Spacing**: 0.5px for headings, standard for body text.
+- **Usage**: Inter for body text and navigation ensures readability, while Lora for headings adds warmth and sophistication.
+
+### UI Elements
+- **Buttons**: Rounded (8px radius), with hover effects (scale up by 1.05, shadow enhancement). Use Light Gold for primary CTAs and Soft Blue for secondary buttons.
+- **Cards**: Glassmorphism effect (semi-transparent backgrounds with blur, e.g., `background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);`) for service and doctor cards to create a premium, modern look.
+- **Icons**: Use Line Awesome or Font Awesome for clean, scalable icons (e.g., social media, navigation arrows).
+- **Forms**: Clean, minimal input fields with subtle borders and placeholders, ensuring accessibility with clear labels.
+
+## 3. UI/UX Principles
+The design adheres to modern healthcare web design trends (inspired by sources like Motionbuzz and Webstacks, 2025):
+- **Calming**: Soft colors, rounded corners, and smooth animations reduce visual stress.
+- **Ultra-Modern Tech**: Bento Grid v2.0, glassmorphism, and AI-driven personalization (e.g., adaptive navigation) for a cutting-edge experience.
+- **Professional**: Consistent 8px grid system, high-quality visuals, and clear branding.
+- **Easy to Understand**: Intuitive navigation with descriptive labels, minimal clicks to access information, and clear CTAs.
+- **Premium**: Subtle gradients, shadows, and high-resolution images (when provided) for a luxurious feel.
+- **Accessible**: Comply with WCAG 2.1 AA standards, including screen reader compatibility, keyboard navigation, and sufficient color contrast.
+- **Mobile-First**: Optimize for mobile devices, as 61.5% of web traffic comes from mobile users (Webstacks, 2025).
+- **Trust and Credibility**: Clean layouts, consistent tone, and high-quality content to convey expertise and reliability.
+
+## 4. Bento Grid v2.0 Implementation
+Bento Grid v2.0 is a modular, rectangular layout inspired by Japanese bento boxes, organizing content into visually distinct sections of varying sizes. It’s ideal for showcasing services, doctors, and success stories in a dynamic, organized manner.
+
+### Bento Grid Usage
+| **Page/Section**       | **Bento Grid Layout**                                                                 |
+|------------------------|-------------------------------------------------------------------------------------|
+| Homepage (Services)    | 4-6 cards (e.g., Ob & Gynecology, Fertility), varying sizes (2x2 for main, 1x1 for secondary). |
+| Homepage (Why Choose Us) | 6 cards (Expertise, Facilities, etc.), each with an icon and brief text.            |
+| Service Pages          | 2-column grid: large section for main content, smaller sections for related services. |
+| Success Stories        | Alternating large and small cards for testimonials, with images (if provided).       |
+| Media Coverage         | Cards for media links or embedded videos, varying sizes for visual interest.         |
+
+- **Responsive Design**: Adjusts to 1-column on mobile, 2-3 columns on tablet, 3-4 columns on desktop.
+- **Hover Effects**: Cards scale up (1.05x) and increase shadow opacity on hover.
+- **Glassmorphism**: Apply frosted glass effect to cards for a premium look.
+- **Spacing**: 16px gaps between grid items for a clean, airy layout.
+
+## 5. Animations
+Animations enhance the premium feel while maintaining a calming effect, applied to all title texts and interactive elements.
+
+### Title Animations
+- **Effect**: Fade-in with a slight upward slide (0.6s duration for homepage, 0.4s for subpages).
+- **Trigger**: On page load or when titles enter the viewport.
+- **Variants**:
+  - Homepage titles: Fade-in with a gentle upward motion.
+  - Subpage titles: Slide-in from the left for a dynamic effect.
+  - Dropdown menu items: Fade-in with a staggered delay (0.1s per item).
+
+### Other Animations
+- **Buttons**: Scale up (1.05x) and brighten on hover (0.3s transition).
+- **Cards**: Fade-in with a slight scale-up when entering the viewport.
+- **Navbar Dropdown**: Smooth slide-down (0.3s) with staggered item animations.
+- **Footer Links**: Underline effect on hover for social media links.
+
+## 6. Folder Structure
+The project is split between Django (backend) and React (frontend), with a structured organization for content and media.
+
+### Django Folder Structure
+```
+shashwat_ivf_project/
+├── manage.py
+├── shashwat_ivf/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── pages/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── services/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── doctors/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── contact/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── media/
+│   ├── homepage/
+│   │   ├── logo.png
+│   │   ├── hero_image.jpg
+│   ├── services/
+│   │   ├── ivf/
+│   │   │   ├── procedure.jpg
+│   │   ├── iui/
+│   │   │   ├── procedure.jpg
+│   │   ├── ob_gynecology/
+│   │   │   ├── banner.jpg
+│   │   ├── cosmetic_gynecology/
+│   │   │   ├── banner.jpg
+│   │   ├── egg_freezing/
+│   │   │   ├── banner.jpg
+│   ├── doctors/
+│   │   ├── shital_punjabi.jpg
+│   │   ├── rajesh_punjabi.jpg
+│   ├── success_stories/
+│   │   ├── story1.jpg
+│   │   ├── story2.jpg
+├── static/
+│   ├── css/
+│   ├── js/
+│   └── images/
+└── templates/
+    ├── base.html
+    └── index.html
+```
+
+### React Folder Structure
+```
+frontend/
+├── public/
+│   ├── index.html
+│   └── favicon.ico
+├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   │   ├── placeholder_logo.png
+│   │   │   ├── placeholder_hero.jpg
+│   ├── components/
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── ServicePage.jsx
+│   │   ├── AboutPage.jsx
+│   │   ├── ContactPage.jsx
+│   │   ├── SuccessStories.jsx
+│   │   ├── MediaCoverage.jsx
+│   │   ├── Blog.jsx
+│   │   ├── ServiceCard.jsx
+│   │   ├── DoctorCard.jsx
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Services/
+│   │   │   ├── IVF.jsx
+│   │   │   ├── IUI.jsx
+│   │   │   ├── Counselling.jsx
+│   │   │   ├── Endoscopy.jsx
+│   │   │   ├── Vitrification.jsx
+│   │   │   ├── AssistedHatching.jsx
+│   │   │   ├── ObGynecology.jsx
+│   │   │   ├── CosmeticGynecology.jsx
+│   │   │   ├── EggFreezing.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── SuccessStories.jsx
+│   │   ├── MediaCoverage.jsx
+│   │   ├── Blog.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.js
+│   └── tailwind.config.js
+```
+
+## 7. Navigation Structure
+The navbar is fixed at the top, with a semi-transparent background (glassmorphism effect) on scroll, ensuring a premium and modern look. It includes the following items, with a dropdown for "Our Services" to accommodate all subservices.
+
+### Navbar Items
+| **Item**           | **Description**                                                                 |
+|--------------------|--------------------------------------------------------------------------------|
+| Home               | Links to the homepage with a hero section and services overview.                |
+| About Us           | Links to the About page with doctor profiles.                                  |
+| Our Services       | Dropdown with subservices: IVF, IUI, Counselling, Endoscopy, Vitrification, Assisted Hatching, Ob & Gynecology, Cosmetic Gynecology, Egg Freezing. |
+| Media Coverage     | Links to a page with social media links or embedded media.                      |
+| Success Stories    | Links to a page with patient testimonials.                                      |
+| Blog               | Links to a blog page (potentially linked to an external blog).                  |
+| Contact Us         | Links to the contact page with details and a form.                             |
+
+- **Dropdown Design**: Smooth slide-down animation (0.3s) with staggered item animations (0.1s delay per item). On mobile, the dropdown expands into a full-screen overlay with large, tappable links.
+- **CTA**: Include a "Book Consultation" button in the navbar, styled in Light Gold with a hover effect (scale up and brighten).
+
+## 8. Page Details
+Each page is designed to be visually appealing, accessible, and content-rich, with Bento Grid layouts where appropriate.
+
+### Homepage
+- **Hero Section**:
+  - Full-width with a Soft Blue to Warm Pink gradient background.
+  - Title: "Welcome to Shashwat IVF and Women's Hospital" (animated fade-in).
+  - Subtitle: "NABH Accredited IVF Center in Ahmedabad".
+  - CTA: "Schedule a Consultation" button in Light Gold.
+- **Services Section**: Bento grid with cards for Ob & Gynecology, Fertility, Cosmetic Gynecology, and Egg Freezing. Each card includes a title, brief description, and link to the respective subpage.
+- **Why Choose Us**: Bento grid with 6 cards (Renowned Expertise, State-of-the-Art Facilities, Comprehensive Services, Personalized Care, Empowering Guidance, Holistic Approach), each with an icon and brief text.
+- **CTA Section**: Full-width section with a calming background, encouraging users to contact the hospital.
+
+### About Us
+- **Content**: Profiles of Dr. Shital Punjabi and Dr. Rajesh Punjabi, including names, titles, bios, and images (if provided).
+- **Layout**: Bento grid with two large cards for doctor profiles, each with a glassmorphism effect.
+- **Animation**: Cards fade in with a slight stagger (0.2s delay between cards).
+
+### Our Services
+- **Main Services Page**:
+  - Lists all services in a Bento grid, with cards linking to individual subpages.
+  - Includes a brief overview of each service (e.g., Ob & Gynecology, Fertility).
+- **Subpages (IVF, IUI, Counselling, etc.)**:
+  - Hero section with service title (animated) and brief description.
+  - Main content section with detailed text (e.g., IVF procedure steps).
+  - Related services section in a Bento grid, linking to other services.
+- **Placeholder Pages**: For incomplete pages like PMS Therapy and CVS & Amniocentesis, include a note indicating content is pending or use placeholder text editable via the admin panel.
+
+### Media Coverage
+- **Content**: Bento grid with cards for social media links (e.g., Facebook, YouTube) or embedded media (if available).
+- **Animation**: Cards scale up on hover with a subtle shadow effect.
+
+### Success Stories
+- **Content**: Bento grid with patient testimonials, including quotes and images (if provided).
+- **Animation**: Testimonials fade in as users scroll, with a staggered effect.
+
+### Blog
+- **Content**: List blog posts in a Bento grid or standard list format, potentially linking to an external blog (e.g., https://www.shashwativf.com/blog).
+- **Integration**: Fetch posts via API if recreated, or link to the external blog.
+
+### Contact Us
+- **Content**: Address, phone, emergency phone, email, and a contact form.
+- **Animation**: Contact details fade in with a slight delay for each item.
+- **Form**: Fields for name, email, phone, and message, with submissions stored in the Django database.
+
+## 9. Additional Features
+- **Contact Form**: On the Contact page, include a form with fields for name, email, phone, and message. Store submissions in the Django database for review.
+- **SEO**: Add meta tags (title, description, keywords) for each page using a Django SEO package (e.g., django-meta).
+- **Analytics**: Integrate Google Analytics or a similar tool to track user behavior and engagement.
+- **Loading States**: Display subtle loading spinners during API calls to enhance user experience.
+- **Telemedicine Integration**: Consider adding features for virtual consultations or appointment scheduling, aligning with 2025 healthcare trends (Webstacks, 2025).
+
+## 10. Image Handling
+Images must be provided manually and organized in the `media/` folder with descriptive filenames to avoid confusion. Examples:
+- Homepage: `media/homepage/logo.png`, `media/homepage/hero_image.jpg`
+- Services: `media/services/ivf/procedure.jpg`, `media/services/iui/procedure.jpg`
+- Doctors: `media/doctors/shital_punjabi.jpg`, `media/doctors/rajesh_punjabi.jpg`
+- Success Stories: `media/success_stories/story1.jpg`
+
+Placeholder images can be used until actual images are provided, stored in `frontend/src/assets/images/`.
+
+## 11. Technical Implementation
+### Django Backend
+- **Models**:
+  - **Page**: Fields for title, content (rich text), slug, is_published.
+  - **Service**: Fields for name, description, slug, image.
+  - **Doctor**: Fields for name, title, bio, image.
+  - **Contact**: Fields for address, phone, emergency_phone, email, map_link.
+  - **MediaLink**: Fields for platform, URL.
+- **API**: Use Django REST Framework for endpoints (e.g., `/api/pages/`, `/api/services/`).
+- **Admin Panel**: Use django-ckeditor for rich text fields and django-imagekit for image optimization.
+
+### React Frontend
+- **Dependencies**:
+  - react-router-dom for routing.
+  - axios for API calls.
+  - framer-motion for animations.
+  - react-intersection-observer for viewport-based animations.
+  - tailwindcss for styling.
+- **Routing**:
+  - `/`: Home
+  - `/about`: About Us
+  - `/services`: Main Services page
+  - `/services/ivf`, `/services/iui`, etc.: Individual service pages
+  - `/media-coverage`: Media Coverage
+  - `/success-stories`: Success Stories
+  - `/blog`: Blog
+  - `/contact`: Contact Us
+- **Styling**: Use Tailwind CSS for responsive, modern styling with a consistent 8px grid system.
+
+## 12. Ensuring Completeness
+- **All Pages Covered**: Includes Home, About Us, Our Services (with all subservices), Media Coverage, Success Stories, Blog, and Contact Us.
+- **Dropdown Menu**: Fully implemented with all services (IVF, IUI, Counselling, Endoscopy, Vitrification, Assisted Hatching, Ob & Gynecology, Cosmetic Gynecology, Egg Freezing).
+- **Content Management**: All text and images are editable via the Django admin panel.
+- **Animations**: Applied to all title texts and interactive elements for a premium, engaging experience.
+- **Responsive Design**: Optimized for mobile, tablet, and desktop layouts.
+- **Accessibility**: WCAG 2.1 AA compliance with ARIA labels and keyboard navigation.
+- **Image Organization**: Descriptive filenames in a structured media folder to ensure clarity.
+
+## 13. References
+- [Healthcare Web Design Trends in 2025 - Motionbuzz](https://www.motionbuzz.com/blog/healthcare-web-design-trends/)
+- [Top 10 Best Healthcare Websites in 2024 - Crucible](https://crucible.io/insights/design/10-best-healthcare-websites-2024/)
+- [10 Healthcare UX Design Trends to Know in 2025 - Webstacks](https://www.webstacks.com/blog/healthcare-ux-design)
+- [Top 10 Healthcare Website Design Examples For 2025 - Digital Silk](https://www.digitalsilk.com/digital-trends/best-healthcare-website-design-examples/)
+- [18 Best Healthcare Website Design Examples (2025) - Webstacks](https://www.webstacks.com/blog/healthcare-website-design)
+
+This specification ensures a modern, calming, and premium website that meets the needs of Shashwat IVF and Women's Hospital, with all functionality and design elements tailored to its audience.

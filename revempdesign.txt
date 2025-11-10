@@ -1,0 +1,143 @@
+# Objective
+Redesign the Shashwat IVF & Women’s Hospital site to replicate—and improve upon—the structure, feel, and interactivity of https://www.safefertilitygroup.com/en/home, using React (JSX) + Tailwind CSS, with content from Django REST API.
+
+## 1. Navigation
+- Top fixed navbar (glassmorphism) with EN/HI toggles.
+- Multi-level mega-menus:
+  - “About Us” (with subitems).
+  - “Our Services” (all IVF, IUI, Egg Freezing, Embryo Transfer, etc.).
+  - “Investor Relations” (omit if not needed).
+- Slide-down animation: 0.3s, staggered 0.1s per item.
+- “Book Consultation” button (Light Gold #E8D5A1).
+
+## 2. Hero & Appointment Form
+- Hero height: 100vh; BG: gradient Soft Blue→Warm Pink; heading (Lora, 48px desktop / 36px mobile) fade-in up (0.6s).
+- Bottom-sticky appointment form component:
+  - Fields: Service (dropdown), Branch (dropdown).
+  - Button: “Make Appointment” (rounded 8px, hover scale 1.05 + shadow).
+  - Animate upward on scroll into view.
+
+## 3. Parallax & Glassmorphism
+- Insert two SVG sphere layers per section:
+  - Sharp sphere moving at scroll speed 0.5×.
+  - Blurred sphere at 0.2×.
+- Glass cards: `backdrop-filter: blur(10px); background: rgba(255,255,255,0.1)`.
+
+## 4. “Why Choose Us”
+- Full-width BG image with overlay cards (icon + headline + text).
+- Grid: 3 columns desktop, 1 column mobile.
+- Cards fade-in with 0.2s stagger.
+
+## 5. Services Section
+- Bento Grid v2.0:
+  - “For Women”: 2×2 main card + two 1×1 cards.
+  - “For Men” & “Others”: similar.
+- Card hover: scale 1.05, shadow deepen.
+- “Explore” link bottom-right.
+
+## 6. Success-Rate Counters
+- Animated counters (0 → target) triggered via Intersection Observer.
+- Style: large bold text (Poppins Bold 64px), label below.
+- BG panels semi-transparent over section BG.
+
+## 7. News & Blog
+- 3-column grid desktop; carousel mobile.
+- Each item: date (Inter 14px), headline (Lora Bold 20px), “Read More.”
+- Fade-up on scroll with 0.1s item delay.
+
+## 8. Branch Locator
+- Card grid showing branch count and map pin icon.
+- CTA “Find Nearest Branch” linking to contact page.
+
+## 9. Footer
+- 4-column layout: Quick Links, Contact Info, Newsletter, Social.
+- Accreditation badges row.
+- Subscribe form with validation microinteractions.
+
+## 10. Accessibility & Performance
+- WCAG 2.1 AA compliant: ARIA roles, keyboard nav, alt tags.
+- Mobile-first breakpoints: 1col <640px, 2col 640–1024px, 3col >1024px.
+- Image optimization: lazy loading, responsive `srcset`.
+- Code-splitting & tree-shaking for performance.
+
+## 11. Components & Animations
+- Use Framer Motion for all enter/exit animations.
+- Reusable components:
+  - `<Navbar />`, `<MegaMenu />`, `<HeroWithForm />`
+  - `<ParallaxLayer />`, `<GlassCard />`
+  - `<BentoGrid services=[...] />`, `<Counter />`
+  - `<NewsGrid />`, `<BranchCards />`, `<Footer />`
+- Document PropTypes, CSS variable usage in `tailwind.config.js`.
+
+# Deliverables
+- Complete, production-ready code for all above components.
+- Example `.env.example` for API endpoints.
+- README with setup, deploy, and customization instructions.
+
+
+### Navigation & Mega-Menu
+The top nav uses a fixed, semi-transparent bar with multi-level dropdowns under “About SAFE,” “Services,” and “Investor Relations,” plus an EN/TH/中文 language toggle 
+safefertilitygroup.com
+.
+
+### Hero & Appointment Form
+Beneath the menu, a full-width hero with accreditation claim “We are the 1ᵗˢᵗ clinic in Thailand to be accredited by RTAC”, followed by a dual-select appointment form (“Service” + “Branch”) pinned at the bottom of the viewport on scroll 
+safefertilitygroup.com
+.
+
+### Parallax Background Graphics
+Throughout, ball-shaped SVGs float in parallax layers—one blurred, one sharp—behind section headings to add subtle dynamism 
+safefertilitygroup.com
+.
+
+### “Why Choose SAFE” Section
+A full-bleed background image paired with a large heading and a call-to-action button, introducing the clinic’s USP and Personal Assistant feature with icon-text cards 
+safefertilitygroup.com
+.
+
+### Services Grid
+A three-column Bento-style grid (“For Women,” “For Men,” “Others”), each card featuring a background image, service list, and “Explore” link 
+safefertilitygroup.com
+.
+
+### Animated Success-Rate Counters
+In the “Success Rates” section, numeric counters animate upward when scrolled into view, overlaying semi-transparent background panels 
+safefertilitygroup.com
+.
+
+### News & Blog Section
+A multi-column grid of recent news/articles with dates and “Read More” links, supporting on-scroll fade-ins with staggered delays 
+safefertilitygroup.com
+.
+
+### Branch Locator
+A card layout showing “5 Branches” with map pin imagery, alternating section BGs, and a “Make Appointment” CTA 
+safefertilitygroup.com
+.
+
+### Footer & Social
+Comprehensive footer with social icons, newsletter subscription, accreditation badges, and link clusters—all layered over a softened background gradient 
+safefertilitygroup.com
+.
+
+## Relevant 2025 Design Trends
+Telemedicine & Appointment Scheduling are now integral, requiring calendar-sync widgets and secure chat portals 
+motionbuzz.com
+.
+
+Accessibility (WCAG 2.1 AA) is mandatory—screen-reader labels, keyboard nav, captioned media, color-contrast checks 
+motionbuzz.com
+.
+
+AI-Driven Personalization tailors recommendations, content modules, and chatbots based on user behavior 
+Webstacks
+.
+
+Microinteractions (hover states, progress bars, confirmation animations) boost user confidence and reduce friction 
+Webstacks
+.
+
+Modular Design Systems with atomic-style components ensure consistency and scalability across pages 
+Webstacks
+.
+
